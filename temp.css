@@ -7,6 +7,7 @@ ul > li:before {content: "- ";}
 	hr {border: 0; border-top: 1px solid #AAAAAA;}
 	.header {color: #19A974;}
 	.content {color: #AAAAAA;}
+	.contact {background-color: #137752; color: #FFFFFF;}
 }
 
 @media (prefers-color-scheme: light) {
@@ -14,4 +15,5 @@ ul > li:before {content: "- ";}
 	hr {border: 0; border-top: 1px solid #000000;}
 	.header {color: #00449E;}
 	.content {color: #000000}
+	.contact {background-color: #00449E; color: #FFFFFF;}
 }

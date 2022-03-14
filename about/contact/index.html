@@ -32,13 +32,11 @@
 	<hr class="mw6 mv0">
 
 	<div class="content mw6 ph3 tj center helvetica">
-		<p>Here are my contact details, listed in order of preference:</p>
-		<ul class="list pl3">
-			<li><a href="mailto:naomi.deakin@icloud.com">Email</a></li>
-			<li><a href="https://t.me/ndeakin">Telegram</a></li>
-			<li>Three</li>
-			<li>Four</li>
-		</ul>
+		<p>I would prefer to be contacted via email, but here are a few methods of getting in touch:</p>
+		<div class="flex">
+			<div class="contact w-50 tc ma2 pa2 br2 bg-dark-green dim"><a class="link white" href="mailto:me@nao.id.au">Email</a></div>
+			<div class="contact w-50 tc ma2 pa2 br2 bg-dark-green dim"><a class="link white" href="https://t.me/ndeakin">Telegram</a></div>
+		</div>
 	</div>
 
 	<hr class="mw6 mv0">
@@ -49,6 +47,16 @@
 
 <script data-goatcounter="https://nao.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<script>
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
 
 </body>	
 
