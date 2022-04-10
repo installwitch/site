@@ -6,3 +6,4 @@ My personal website, written by hand in "somewhat minimal" HTML. You can view it
 List of other projects used:  
 - [Tachyons](https://github.com/tachyons-css/tachyons/) (Code) (MIT)
 - [Twemoji](https://github.com/twitter/twemoji) (Graphics) (CC-BY-4.0)
+- [Rubik](https://github.com/googlefonts/rubik) (Font Families) (OFL)
