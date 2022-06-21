@@ -1,0 +1,15 @@
+{% macro render_pagination(pagination) %}
+  <div class="pagination mw6 center flex justify-around">
+    {% if pagination.has_prev %}
+      <div class="w-50 tc mh2"><a class="link dim" href="{{ pagination.prev|url }}">Previous Page</a></div>
+    {% else %}
+      <div class="w-50 tc mh2"><span class="disabled">Previous Page</span></div>
+    {% endif %}
+
+    {% if pagination.has_next %}
+      <div class="w-50 tc mh2"><a class="link dim" href="{{ pagination.next|url }}">Next Page</a></div>
+    {% else %}
+      <div class="w-50 tc mh2"><span class="disabled">Next Page</span></div>
+    {% endif %}
+  </div>
+{% endmacro %}

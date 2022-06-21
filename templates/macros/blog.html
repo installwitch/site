@@ -1,0 +1,30 @@
+{% macro render_blog_post(post, from_index=false) %}
+<article class="pt2 ph0-l">
+  <div class="flex flex-column flex-row-ns">
+    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
+      {% if from_index %}
+        <a class="link" href="{{ post|url }}"><h1 class="f4 mt0 lh-title">{{ post.title }}</h1></a>
+      {% else %}
+        <h1 class="f4 mt0 lh-title">{{ post.title }}</h1>
+      {% endif %}
+      <p class="f6 lh-copy">{{ post.summary }}</p>
+      <p class="f6 lh-copy gray mv0">By
+        {% if post.twitter_handle %}
+        <a class="link" href="https://twitter.com/{{ post.twitter_handle
+        }}">{{ post.author or post.twitter_handle }}</a>
+        {% else %}
+          {{ post.author }}
+        {% endif %}
+      </p>
+      <time class="f6 db gray">On {{ post.pub_date }}</time>
+      </div>
+      <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
+        <a class="link" href="{{ post|url }}">
+          <div class="aspect-ratio aspect-ratio--4x3">
+            <div class="aspect-ratio--object cover db thumbnail" style="background:url({{ post|url }}photo.jpg) center;"></div>
+          </div>
+        </a>
+      </div>
+  </div>
+</article>
+{% endmacro %}

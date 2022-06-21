@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+body,html{font-family: "Fira Mono", -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;}
+a {color: unset;}
+a:visited {color: unset;}
+a.expand {display: block; width: 100%; height: 100%;}
+ul {list-style-type: none; padding-left: 1em;}
+ul li:before {content: "– ";}
+@media (prefers-color-scheme: dark) {
+	body, html {background-color: #111111;}
+	hr {border: 0; border-top: 1px solid #AAAAAA;}
+	.active {color: #137752;}
+	.contact {background-color: #137752;}
+	.contact a{color: #FFFFFF;}
+	.content {color: #AAAAAA;}
+	.content a{color: #19A974;}
+	.header {color: #19A974;}
+	.tagline {color: #19A974;}
+	.thumbnail{border: 1px #AAAAAA solid;}
+	.title {color: #AAAAAA;}
+}
+@media (prefers-color-scheme: light) {
+	body, html {background-color: #F4F4F4}
+	hr {border: 0; border-top: 1px solid #000000;}
+	.active {color: #001b44;}
+	.contact {background-color: #00449E;}
+	.contact a{color: #FFFFFF;}
+	.content {color: #000000}
+	.content a{color: #00449E;}
+	.header {color: #00449E;}
+	.tagline {color: #00449E;}
+	.title {color: #000000;}
+	.thumbnail{border: 1px #000000 solid;}
+}

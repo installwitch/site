@@ -1,0 +1,6 @@
+[project]
+name = nao
+locale = en_AU
+url = https://nao.id.au/
+
+[packages]
