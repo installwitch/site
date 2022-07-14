@@ -1,5 +1,11 @@
 title: Home
 ---
-body: Yeahhh uhhhh woahh !!!
+body:
+
+**Hi there.**  I'm Naomi, welcome to my website.
+
+Here's where you can find me:
+* Website
+* Webbed Site
 ---
 _template: home.html

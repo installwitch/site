@@ -1,13 +1,7 @@
-_model: page
+_model: blog
 ---
 title: Projects
 ---
-body:
-
-###Current:
-* []()
-* []()
-
-###Previous:
-* []()
-* []()
+body: 
+---
+_template: projects.html

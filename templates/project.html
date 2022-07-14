@@ -1,0 +1,6 @@
+{% extends "layout-blog.html" %}
+{% from "macros/project.html" import render_project %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {{ render_project(this) }}
+{% endblock %}
