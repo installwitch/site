@@ -1,23 +1,21 @@
 {% macro render_blog_post(post, from_index=false) %}
-<article class="pt2 ph0-l">
-  <div class="flex flex-column flex-row-ns">
-    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-      {% if from_index %}
-        <a class="link" href="{{ post|url }}"><h1 class="f4 mv0 lh-title">{{ post.title }}</h1></a>
-      {% else %}
-        <h1 class="f4 mv0 lh-title">{{ post.title }}</h1>
-      {% endif %}
-      <p class="f6 lh-copy">{{ post.summary }}</p>
-      <p class="f6 lh-copy gray mv0">By {{ post.author }}</p>
-      <time class="f6 db gray">On {{ post.pub_date }}</time>
+<article class="flex justify-between center hidden br1 ba mv4">
+  <div class="w-70">
+    <div class="card">
+      <h1 class="f4 mv0 pv2 ph2 truncate"><a class="link" href="{{ post|url }}">{{ post.title }}</a></h1>
+    </div>
+    <div class="flex flex-column justify-between">
+      <p class="f6 ph2 lh-copy truncate">{{ post.summary }}</p>
+      <p class="f6 mv0 ph2 lh-copy truncate"><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</p>
+      <p class="f6 mt0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
+    </div>
+  </div>
+  <div class="w-30">
+    <article>
+      <div class="aspect-ratio aspect-ratio--1x1 bl">
+        <div class="aspect-ratio--object cover" style="background:url({{ post|url }}/photo.jpg) center;"></div>
       </div>
-      <div class="pl3-ns order-1 order-2-ns mb4 mb0-ns w-100 w-40-ns">
-        <a class="link" href="{{ post|url }}">
-          <div class="aspect-ratio aspect-ratio--4x3">
-            <div class="aspect-ratio--object cover db thumbnail" style="background:url({{ post|url }}photo.jpg) center;"></div>
-          </div>
-        </a>
-      </div>
+    </article>
   </div>
 </article>
 {% endmacro %}

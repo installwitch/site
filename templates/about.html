@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<h1 class="f3 lh-title">{{ this.title}}</h1>
+<div class="flex items-center justify-around">
+    <div>
+        <img class="br1 h3 w3 db ba" src="{{ this.avatar }}">
+    </div>
+    <div>
+        <h1 class="mv0 f4 ph2"> {{ this.name }}</h1>
+        <p class="mv0 ph2">{{ this.pronouns }}</p>
+    </div>
+    <div>
+        <img src="{{ this.prideflag }}">
+    </div>
+</div>
+{{ this.body }}
+{% endblock %}

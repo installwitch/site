@@ -1,12 +1,9 @@
 @import url("../fonts/fira-sans/fira-sans.css");
 @import url("../fonts/fira-mono/fira-mono.css");
-
 html{font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;}
 code {font-family: "Fira Mono", "Courier New", Courier, monospace;}
-
 a {color: unset;}
 a:visited {color: unset;}
-
 @media (prefers-color-scheme: dark) {
 	body, html {background-color: #111111;}
 	hr {border: 0; border-top: 1px solid #AAAAAA;}

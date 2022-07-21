@@ -1,26 +1,23 @@
 {% macro render_blog_post(post, from_index=false) %}
-<article class="ph0-l">
   <article class="center pt2">
       <div class="aspect-ratio aspect-ratio--16x9 mb4">
-        <div class="aspect-ratio--object cover" style="background:url(photo.jpg) center;"></div>
+        <div class="aspect-ratio--object cover br1" style="background:url(photo.jpg) center;"></div>
       </div>
   </article>      
   <div class="flex flex-column">
-    <div class="w-100">
-      <h1 class="f3 mt0 lh-title">{{ post.title }}</h1>
-      <p class="f5">{{ post.summary }}</p>
-      <p class="f6 lh-copy gray mv0">By
-        {% if post.twitter_handle %}
-          <a href="https://twitter.com/{{ post.twitter_handle
-          }}">{{ post.author or post.twitter_handle }}</a>
-        {% else %}
-          {{ post.author }}
-        {% endif %}
-      </p>
-      <time class="f6 db gray">On {{ post.pub_date }}</time>
-      <hr>
-      <p class="f5 f4-l lh-copy">{{ post.body }}</p>
+    <article class="center hidden br1 ba w-100">
+    <div>
+      <div class="card">
+        <h1 class="f4 mv0 pv2 ph2 truncate">{{ post.title }}</h1>
+      </div>
+      <div class="flex flex-column">
+        <p class="f6 ph2 lh-copy truncate">{{ post.summary }}</p>
+        <p class="f6 mv0 ph2 lh-copy truncate"><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</p>
+        <p class="f6 mt0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
+      </div>
+    </article>
+      <div>{{ post.body }}</div>
     </div>
+
   </div>
-</article>
 {% endmacro %}
