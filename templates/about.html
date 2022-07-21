@@ -2,7 +2,8 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 <h1 class="f3 lh-title">{{ this.title}}</h1>
-<div class="flex items-center justify-around">
+<div class="flex flex-row-ns flex-column items-center-ns justify-around">
+<div class="flex items-center mv2">
     <div>
         <img class="br1 h3 w3 db ba" src="{{ this.avatar }}">
     </div>
@@ -10,9 +11,15 @@
         <h1 class="mv0 f4 ph2"> {{ this.name }}</h1>
         <p class="mv0 ph2">{{ this.pronouns }}</p>
     </div>
-    <div>
-        <img src="{{ this.prideflag }}">
-    </div>
+</div>
+<div class="flex flex-column items-start mv1">
+    <a class="link mv1" href="{{ this.social_link_one }}"><i class="fa-fw fa fa-{{ this.social_icon_one }}" aria-hidden="true"></i> {{ this.social_one }}</a>
+    <a class="link mv1" href="{{ this.social_link_two }}"><i class="fa-fw fa fa-{{ this.social_icon_two }}" aria-hidden="true"></i> {{ this.social_two }}</a>
+</div>
+<div class="flex flex-column items-start mv1">
+    <a class="link mv1" href="{{ this.social_link_three }}"><i class="fa-fw fa fa-{{ this.social_icon_three }}" aria-hidden="true"></i> {{ this.social_three }}</a>
+    <a class="link mv1" href="{{ this.social_link_four }}"><i class="fa-fw fa fa-{{ this.social_icon_four }}" aria-hidden="true"></i> {{ this.social_four }}</a>
+</div>
 </div>
 {{ this.body }}
 {% endblock %}

@@ -1,6 +1,6 @@
 {% macro render_blog_post(post, from_index=false) %}
 <article class="flex justify-between center hidden br1 ba mv4">
-  <div class="w-70">
+  <div class="w-70-ns w-60">
     <div class="card">
       <h1 class="f4 mv0 pv2 ph2 truncate"><a class="link" href="{{ post|url }}">{{ post.title }}</a></h1>
     </div>
@@ -10,10 +10,10 @@
       <p class="f6 mt0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
     </div>
   </div>
-  <div class="w-30">
+  <div class="w-30-ns w-40">
     <article>
       <div class="aspect-ratio aspect-ratio--1x1 bl">
-        <div class="aspect-ratio--object cover" style="background:url({{ post|url }}/photo.jpg) center;"></div>
+        <a href="{{ post|url }}"><div class="aspect-ratio--object cover" style="background:url({{ post|url }}/photo.jpg) center;"></div></a>
       </div>
     </article>
   </div>

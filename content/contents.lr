@@ -2,10 +2,8 @@ title: Home
 ---
 body:
 
-**Hi there.**  I'm Naomi, welcome to my website.
+**Hi there**, I'm Naomi. Enjoy your stay.
 
-Here's where you can find me:
-* Website
-* Webbed Site
+Here are a couple of my latest blog posts:
 ---
 _template: home.html
