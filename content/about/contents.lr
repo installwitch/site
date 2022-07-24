@@ -32,18 +32,18 @@ social_icon_one: twitter
 ---
 social_icon_three: mastodon
 ---
-social_icon_two: instagram
+social_icon_two: github
 ---
 social_link_four: https://www.youtube.com/channel/UCrXIczLyI5fegYvZlte7t4Q
 ---
-social_link_one: https://twitter.com/css_witch
+social_link_one: https://twitter.com/installwitch
 ---
-social_link_three: https://aus.social/@css_witch
+social_link_three: https://aus.social/@installwitch
 ---
-social_link_two: https://www.instagram.com/css_witch/
+social_link_two: https://github.com/installwitch
 ---
 social_one: Twitter
 ---
 social_three: Mastodon
 ---
-social_two: Instagram
+social_two: GitHub
