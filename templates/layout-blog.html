@@ -11,24 +11,21 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/static/img/favicon/favicon-16x16.png'|url }}">
   <link rel="stylesheet" href="{{ '/static/css/tachyons.min.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/css/main.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/css/highlight.min.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/css/fork-awesome.min.css'|url }}">
-  <script src="{{ '/static/js/highlight.min.js'}}"></script>
-  <script>hljs.highlightAll();</script>
 </head>
 <body>
   <div class="logo ph2 mw6 center tl flex justify-between">
     <h1 class="title mh2 tracked lh-title f3">nao.id.au</h1>
   </div>
   <div class="header mw6 center flex justify-around">
-    <div{% if this._path == '/' %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif%}>
+    <div {% if this._path == '/' %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif%}>
       <p><a class="link dim" href="{{ '/'|url }}">Home</a></p></div>
         {% for href, title in [
           ['/about', 'About'],
           ['/projects', 'Projects'],
           ['/blog', 'Blog']
         ] %}
-          <div{% if this.is_child_of(href) %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif
+          <div {% if this.is_child_of(href) %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif
             %}><p><a class="link dim" href="{{ href|url }}">{{ title }}</a></p></div>
         {% endfor %}
     </div>
