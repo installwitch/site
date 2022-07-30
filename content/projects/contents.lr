@@ -1,7 +1,7 @@
-_model: projects
+_model: page-projects
 ---
 title: Projects
 ---
 body: 
 ---
-_template: projects.html
+_template: page-projects.html

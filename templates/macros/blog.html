@@ -1,13 +1,13 @@
 {% macro render_blog_post(post, from_index=false) %}
-<article class="flex justify-between center hidden br1 ba mv4">
+<article class="flex justify-between center hidden ba mv4">
   <div class="w-70-ns w-60">
     <div class="card">
       <h1 class="f4 mv0 pv2 ph2 truncate"><a class="link" href="{{ post|url }}">{{ post.title }}</a></h1>
     </div>
-    <div class="flex flex-column justify-between">
-      <p class="f6 ph2 lh-copy truncate">{{ post.summary }}</p>
+    <div class="flex flex-column">
+      <p class="f6 mt2 mb2 ph2 lh-copy truncate">{{ post.summary }}</p>
       <p class="f6 mv0 ph2 lh-copy truncate"><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</p>
-      <p class="f6 mt0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
+      <p class="f6 mv0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
     </div>
   </div>
   <div class="w-30-ns w-40">

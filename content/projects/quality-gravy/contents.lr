@@ -4,10 +4,10 @@ link: https://qualitygravy.com
 ---
 icon: github
 ---
-github: https://github.com/60mph/qualitygravy
----
 icon_link: https://github.com/60mph/qualitygravy
 ---
 summary: A soon-to-be website that randomly generates humorous e-mail addresses based on a video by ClickHole.
 ---
 pub_date: 2021-12-10
+---
+_template: page-project.html

@@ -7,4 +7,4 @@ body:
 Please ignore the cobwebs while I figure out what to put on my homepage.
 
 ---
-_template: home.html
+_template: page-home.html

@@ -1,3 +1,5 @@
-_model: blog
+_model: page-blog
 ---
 title: Blog
+---
+_template: page-blog.html

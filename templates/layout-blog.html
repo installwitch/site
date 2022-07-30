@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <title>nao.id.au</title>
-  <meta property="og:title" content="nao.id.au">
-  <meta property="og:description" content="Naomi's Stuff">
-  <meta property="og:image" content="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
+  <title>{{ this.title }} - Naomi's Stuff</title>
+  <meta property="og:title" content="{{ this.title }} - Naomi's Stuff">
+  <meta property="og:description" content="{{ this.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" href="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
+  <meta property="og:url" content="https://nao.id.au/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/static/img/favicon/apple-touch-icon.png'|url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/static/img/favicon/favicon-32x32.png'|url }}">
@@ -14,31 +16,32 @@
   <link rel="stylesheet" href="{{ '/static/css/fork-awesome.min.css'|url }}">
 </head>
 <body>
-  <div class="logo ph2 mw6 center tl flex justify-between">
-    <h1 class="title mh2 tracked lh-title f3">nao.id.au</h1>
+  <div class="center flex items-center mw6 ph2">
+    <img class="h2 pr2 pv2" src="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
+    <h1 class="title f3 lh-title title tracked truncate">Naomi's Stuff</h1>
   </div>
-  <div class="header mw6 center flex justify-around">
-    <div {% if this._path == '/' %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif%}>
-      <p><a class="link dim" href="{{ '/'|url }}">Home</a></p></div>
+  <div class="center flex header justify-around mw6 ">
+    <div {% if this._path == '/' %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif%}>
+      <p><a class="dim link" href="{{ '/'|url }}">Home</a></p></div>
         {% for href, title in [
           ['/about', 'About'],
           ['/projects', 'Projects'],
           ['/blog', 'Blog']
         ] %}
-          <div {% if this.is_child_of(href) %} class="active w-20 tc mh2" {% else %} class="w-20 tc mh2" {% endif
-            %}><p><a class="link dim" href="{{ href|url }}">{{ title }}</a></p></div>
+          <div {% if this.is_child_of(href) %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif
+            %}><p><a class="dim link" href="{{ href|url }}">{{ title }}</a></p></div>
         {% endfor %}
     </div>
-  <hr class="mw6 center">
-  <div class="content ph2 mw6 center">
-    {% block body %}{% endblock %}
+  <hr class="center mw6">
+  <div class="center content mw6 ph2">
+      {% block body %}{% endblock %}
   </div>
   <hr class="mw6 center">
   <div class="content ph2 mw6 center">
     {% block pagination %}{% endblock %}
   </div>
-  <hr class="mw6 center">
-	<footer class="footer mw6 mv3 tc center mid-gray">
-    <small class="f6"><a class="link mid-gray dim" href="https://github.com/installwitch">© Naomi Deakin</a> – <a class="link mid-gray dim" href="https://github.com/installwitch/site/blob/master/README.md">Licensed under MIT</a></small>
+  <hr class="center mw6">
+	<footer class="center footer mid-gray mv3 mw6 tc">
+    <small class="f6"><a class="dim link mid-gray" href="/copyright/">© Naomi Deakin</a> – <a class="dim link mid-gray" href="/attribution/">Attribution</a></small>
   </footer>
 </body>
