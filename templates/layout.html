@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{{ this.title }} - Naomi's Stuff</title>
   <meta property="og:title" content="{{ this.title }} - Naomi's Stuff">
   <meta property="og:description" content="{{ this.description }}">
   <meta property="og:type" content="website">
-  <meta property="og:image" href="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
+  <meta property="og:image" content="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
   <meta property="og:url" content="https://nao.id.au/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/static/img/favicon/apple-touch-icon.png'|url }}">
@@ -16,11 +17,11 @@
   <link rel="stylesheet" href="{{ '/static/css/fork-awesome.min.css'|url }}">
 </head>
 <body>
-  <div class="center flex items-center mw6 ph2">
-    <img class="h2 pr2 pv2" src="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}">
+  <header class="center flex items-center mw6 ph2">
+    <img class="h2 pr2 pv2" src="{{ '/static/img/favicon/android-chrome-512x512.png'|url }}" alt="Website logo">
     <h1 class="title f3 lh-title title tracked truncate">Naomi's Stuff</h1>
-  </div>
-  <div class="center flex header justify-around mw6 ">
+  </header>
+  <nav class="center flex header justify-around mw6 ">
     <div {% if this._path == '/' %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif%}>
       <p><a class="dim link" href="{{ '/'|url }}">Home</a></p></div>
         {% for href, title in [
@@ -31,13 +32,14 @@
           <div {% if this.is_child_of(href) %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif
             %}><p><a class="dim link" href="{{ href|url }}">{{ title }}</a></p></div>
         {% endfor %}
-    </div>
+  </nav>
   <hr class="center mw6">
-  <div class="center content mw6 ph2 tj">
+  <main class="center content mw6">
     {% block body %}{% endblock %}
-  </div>
+  </main>
   <hr class="center mw6">
 	<footer class="center footer mid-gray mv3 mw6 tc">
     <small class="f6"><a class="dim link mid-gray" href="/copyright/">© Naomi Deakin</a> – <a class="dim link mid-gray" href="/attribution/">Attribution</a></small>
   </footer>
 </body>
+</html>

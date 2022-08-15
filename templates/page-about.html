@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-<h1 class="f3 lh-title">{{ this.title}}</h1>
+<h2 class="f3 lh-title">{{ this.title}}</h2>
 <div class="flex flex-row-ns flex-column items-center-ns justify-around">
 <div class="flex items-center mv2">
     <div>
-        <img class="h3 w3 db ba" src="{{ this.avatar }}">
+        <img class="h3 w3 db ba" src="{{ this.avatar }}" alt="A picture of me.">
     </div>
     <div>
         <h1 class="mv0 f4 ph2"> {{ this.name }}</h1>

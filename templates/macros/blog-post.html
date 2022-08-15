@@ -1,6 +1,6 @@
 {% macro render_blog_post(post, from_index=false) %}
   <article class="center">
-      <div class="aspect-ratio aspect-ratio--16x9 mb2">
+      <div class="aspect-ratio aspect-ratio--16x9">
         <div class="aspect-ratio--object cover ba" style="background:url(photo.jpg) center;"></div>
       </div>
   </article>      
@@ -8,7 +8,7 @@
     <article class="center hidden ba w-100">
     <div>
       <div class="card">
-        <h1 name="top" class="f4 mv0 pv2 ph2 truncate">{{ post.title }}</h1>
+        <h2 name="top" class="f4 mv0 pv2 ph2 truncate">{{ post.title }}</h2>
       </div>
       <div class="flex flex-column">
         <p class="f6 ph2 lh-copy">{{ post.summary }}</p>
@@ -18,7 +18,7 @@
     </article>
 
       <div class="contents">
-        <h1>Contents</h1>
+        <h2>Contents</h2>
         <ul class="toc">
           {% for item in post.body.toc recursive %}
             <li><a href="#{{ item.anchor }}">{{ item.title }}</a>{%
