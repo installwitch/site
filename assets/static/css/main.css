@@ -3,6 +3,7 @@
 html{font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;}
 .hll pre, code, .title {font-family: "Fira Mono", monaco, monospace;}
 .hll {background-color: #202020; overflow: scroll; padding: 0rem 1rem 0rem 1rem;}
+.logo {width: 32px; height: 32px;}
 a {color: unset;}
 a:visited {color: unset;}
 @media (prefers-color-scheme: dark) {
