@@ -19,28 +19,30 @@
   <link rel="stylesheet" href="{{ '/static/css/fork-awesome.min.css'|url }}">
 </head>
 <body>
-  <header class="center flex items-center mw6 ph2">
+  <div class="flex items-center justify-between">
+  <header class="flex items-center ph2 self-start">
     <img class="h2 logo pr2 pv2" src="{{ '/static/img/favicon/favicon-32x32.png'|url }}" alt="Website logo">
     <h1 class="f3 lh-title title tracked truncate">Naomi's Stuff</h1>
   </header>
-  <nav class="center flex header justify-around mw6 ">
-    <div {% if this._path == '/' %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif%}>
+  <nav class="flex header justify-between w-50">
+    <div {% if this._path == '/' %} class="active mh2 tc w-25" {% else %} class="mh2 tc w-25" {% endif%}>
       <p><a class="dim link" href="{{ '/'|url }}">Home</a></p></div>
         {% for href, title in [
           ['/about', 'About'],
           ['/projects', 'Projects'],
           ['/blog', 'Blog']
         ] %}
-          <div {% if this.is_child_of(href) %} class="active mh2 tc w-20" {% else %} class="mh2 tc w-20" {% endif
+          <div {% if this.is_child_of(href) %} class="active mh2 tc w-25" {% else %} class="mh2 tc w-25" {% endif
             %}><p><a class="dim link" href="{{ href|url }}">{{ title }}</a></p></div>
         {% endfor %}
   </nav>
-  <hr class="center mw6">
-  <main class="center content mw6 ph2 ph0-ns">
+  </div>
+  <hr>
+  <main class="content ph2 ph0-ns">
     {% block body %}{% endblock %}
   </main>
-  <hr class="center mw6">
-	<footer class="center footer mid-gray mv3 mw6 tc">
+  <hr>
+	<footer class="footer mid-gray mv3 mw6 tc">
     <small class="f6"><a class="dim link mid-gray" href="/copyright/">© Naomi Deakin-Thomas</a> – <a class="dim link mid-gray" href="/attribution/">Attribution</a></small>
   </footer>
 </body>
