@@ -1,7 +1,7 @@
 # Naomi's Website
 You can view it [here](https://nao.id.au/).  
 
-This website's source code is licensed under [MIT](https://github.com/installwitch/site/blob/master/LICENSE).  
+This website's source code is licensed under [MIT](https://github.com/naomi-deakin/site/blob/master/LICENSE).  
 All written, photographic, and audio content displayed on this page is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) unless attributed. Essentially, everything found inside the Content folder is [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/), as it does not contain any source code.  
 Copyright information can also be found [here](https://nao.id.au/copyright/).
 
