@@ -19,12 +19,12 @@
   <link rel="stylesheet" href="{{ '/static/css/fork-awesome.min.css'|url }}">
 </head>
 <body>
+<div class="container">
   <div class="flex items-center justify-between">
-  <header class="flex items-center ph2 w-40-ns">
-    <img class="h2 logo pr2 pv2" src="{{ '/static/img/favicon/favicon-32x32.png'|url }}" alt="Website logo">
-    <h1 class="di-ns dn f3 lh-title title tracked truncate">Naomi's Stuff</h1>
+  <header class="flex">
+    <h1 class="di-l dn lh-title title truncate">Naomi's Stuff</h1>
   </header>
-  <nav class="flex header justify-between w-100 w-50-ns">
+  <nav class="flex header justify-between w-100 w-50-l">
     <div {% if this._path == '/' %} class="active mh2 tc w-25" {% else %} class="mh2 tc w-25" {% endif%}>
       <p><a class="dim link" href="{{ '/'|url }}">Home</a></p></div>
         {% for href, title in [
@@ -38,12 +38,16 @@
   </nav>
   </div>
   <hr>
-  <main class="content ph2 w-60-ns tj">
+  <main class="content ph0-l ph2 tl">
     {% block body %}{% endblock %}
   </main>
+  <div class="content tc">
+    {% block pagination %}{% endblock %}
+  </div>
   <hr>
 	<footer class="footer mid-gray mv3 tc">
     <small class="f6"><a class="dim link mid-gray" href="/copyright/">© Naomi Deakin-Thomas</a> – <a class="dim link mid-gray" href="/attribution/">Attribution</a></small>
   </footer>
+</div>
 </body>
 </html>

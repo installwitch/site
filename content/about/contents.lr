@@ -2,46 +2,17 @@ title: About Me
 ---
 body:
 
-Hello, I'm Naomi. I'm a young transgender woman from Perth, Australia. I'm interested in a couple of different things, including visual art, music, photography, anime, and computers.  
+Hello, I'm Naomi (she/her). I'm a young transgender woman from Perth, Australia. I'm interested in a couple of different things, including visual art, music, photography, anime, and computers.  
 
 In my spare time, I like to produce electronic music. Most of my music isn't available on streaming services or for download, but I'm gearing to release an album in the not so far future. You can check out a small cut of my unreleased stuff [here](https://soundcloud.com/falseset/sets/demos-other/s-avFukOToHCA), and some of my older stuff [here](https://soundcloud.com/falseset/sets/old-tracks/s-o2GhvCKqA4f). Please keep in mind that these are all unfinished in some way.  
 
 Right now, I'm studying website development. I'm also interested in the [Go](https://go.dev/) programming language, the [Lektor](https://www.getlektor.com/) static site generator, and [Monado](https://monado.freedesktop.org/). I'm really excited to see where virtual reality goes in the next couple of years and what I'll be able to accomplish with it.  
 
-If you'd like to talk to me about anything, please [email me](mailto:me@nao.id.au).
+If you need to reach me, please [email me](mailto:me@nao.id.au), or find me on:
+ - [Instagram](https://instagram.com/naomi.deakin)
+ - [Telegram](https://t.me/naomi_deakin)
 ---
-_slug: about
----
-_template: page-about.html
----
-_model: page-about
----
-name: Naomi
----
-pronouns: she/her
----
-avatar: https://secure.gravatar.com/avatar/96890fe5c05d5681fb1fdec0f045e655
----
-social_four: 
----
-social_icon_four: 
----
-social_icon_one: github
----
-social_icon_three: 
----
-social_icon_two: mastodon
----
-social_link_four: 
----
-social_link_one: https://github.com/naomi-deakin
----
-social_link_three: 
----
-social_link_two: https://theblower.au/@nao
----
-social_one: GitHub
----
-social_three: 
----
-social_two: Mastodon
+_template:
+
+page-about.html
+

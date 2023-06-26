@@ -2,6 +2,4 @@ _model: page-projects
 ---
 title: Projects
 ---
-body: 
----
 _template: page-projects.html

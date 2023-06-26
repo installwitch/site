@@ -6,8 +6,10 @@ icon_link: https://github.com/naomi-deakin/lektor-theme-flat
 ---
 link: https://github.com/naomi-deakin/lektor-theme-flat
 ---
-summary: Simple theme for the Lektor static site generator written using Tachyons CSS.
+summary: A simple theme for the Lektor static site generator written with the Tachyons CSS framework.
 ---
 pub_date: 2022-07-22
 ---
 _template: page-project.html
+---
+_discoverable: no

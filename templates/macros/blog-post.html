@@ -1,34 +1,7 @@
 {% macro render_blog_post(post, from_index=false) %}
-  <article class="center">
-      <div class="aspect-ratio aspect-ratio--16x9">
-        <div class="aspect-ratio--object cover ba" style="background:url(photo.jpg) center;"></div>
-      </div>
-  </article>      
-  <div class="flex flex-column">
-    <article class="center hidden ba w-100">
-    <div>
-      <div class="card">
-        <h2 name="top" class="f4 mv0 pv2 ph2 truncate">{{ post.title }}</h2>
-      </div>
-      <div class="flex flex-column">
-        <p class="f6 ph2 lh-copy">{{ post.summary }}</p>
-        <p class="f6 mv0 ph2 lh-copy truncate"><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</p>
-        <p class="f6 mt0 ph2 lh-copy truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
-      </div>
-    </article>
-
-      <div class="contents">
-        <h2>Contents</h2>
-        <ul class="toc">
-          {% for item in post.body.toc recursive %}
-            <li><a href="#{{ item.anchor }}">{{ item.title }}</a>{%
-             if item.children %}<ul>{{ loop(item.children) }}</ul>{% endif %}</li>
-          {% endfor %}
-          </ul>
-      </div>
-
-      <div>{{ post.body }}</div>
-    </div>
-    <a href="#top">Back to Top</a>
-  </div>
+<article>
+  <h1 class="lh-title">{{ post.title }}</h1>
+  <p>Written by <a href="{{ post.author_url }}">{{ post.author }}</a> on {{ post.pub_date }}.</p>
+  {{ post.body }}
+</article>
 {% endmacro %}
