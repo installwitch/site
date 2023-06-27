@@ -1,14 +1,21 @@
-html{font-family: "Fira Sans", -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;}
-.container {max-width: 64rem; margin: auto;}
-.hll pre, code, .title {font-family: "Fira Mono", monaco, monospace;}
+/* Overall Layout */
+.container {max-width: 48rem; margin: auto;}
 .hll {background-color: #202020; overflow: scroll; padding: 0rem 1rem 0rem 1rem;}
 .logo {width: 32px; height: 32px;}
-a {color: unset;}
-a:visited {color: unset;}
+/* Type Scale */
+
+/* Hamburger Navigation */
+#checkbox {display: none;}
+#checkbox:checked ~ .navigation {display: flex;}
+.button {line-height: 2rem; cursor: pointer;}
+/* Light Mode / Dark Mode Colours */
 @media (prefers-color-scheme: dark) {
 	body, html {background-color: #111111;}
 	hr {border: 0; border-top: 1px solid #AAAAAA;}
+	a {color: unset;}
+	a:visited {color: unset;}
 	.active {color: #137752;}
+	.button {color: #111111; background-color: #AAAAAA;}
 	.card {background-color: #AAAAAA; color: #111111;}
 	.card i{color: #111111;}
 	.card h2 a{color: #111111;}
@@ -22,7 +29,10 @@ a:visited {color: unset;}
 @media (prefers-color-scheme: light) {
 	body, html {background-color: #F4F4F4}
 	hr {border: 0; border-top: 1px solid #000000;}
+	a {color: unset;}
+	a:visited {color: unset;}
 	.active {color: #001b44;}
+	.button {color: #F4F4F4; background-color: #000000;}
 	.card {background-color: #000000; color: #F4F4F4;}
 	.card i{color: #F4F4F4;}
 	.card h2 a{color: #F4F4F4;}

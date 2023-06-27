@@ -12,4 +12,6 @@ pub_date: 2022-07-22
 ---
 _template: page-project.html
 ---
-_discoverable: no
+_discoverable: yes
+---
+body: Hello! There's nothing here.

@@ -1,23 +1,14 @@
 {% macro render_blog_post(post, from_index=false) %}
-<article class="flex justify-between center hidden ba mv4">
-  <div class="w-70-ns w-60">
-    <div class="card">
-      <h2 class="mv0 pv2 ph2 truncate"><a class="link" href="{{ post|url }}">{{ post.title }}</a></h1>
+<article class="ba mv4">
+  <div>
+    <div class="card pv2 ph2">
+      <h2 class="mv0 truncate"><a class="link" href="{{ post|url }}">{{ post.title }}</a></h1>
     </div>
-    <div class="flex flex-column">
-      <p class="mt2 mb2 ph2 lh-copy truncate">{{ post.summary }}</p>
-      <p class="lh-copy mv0 ph2 truncate"><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</p>
-      <p class="lh-copy mv0 ph2 truncate"><i class="fa fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
+    <div class="flex flex-column ph2 pb2">
+      <p class="mt2 mb2 lh-copy">{{ post.summary }}</p>
+      <p class="lh-copy mv0"><i class="fa fa-fw fa-user" aria-hidden="true"></i> {{ post.author }}</p>
+      <p class="lh-copy mv0"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> {{ post.pub_date }}</p>
     </div>
   </div>
-  {% for image in post.attachments.images %}
-  <div class="w-30-ns w-40">  
-    <article>
-      <div class="aspect-ratio aspect-ratio--16x9-ns aspect-ratio--1x1 bl">
-        <a href="{{ post|url }}"><div class="aspect-ratio--object cover" style="background:url({{ image|url }}) center;"></div></a>
-      </div>
-    </article>
-  </div>
-  {% endfor %}
 </article>
 {% endmacro %}
