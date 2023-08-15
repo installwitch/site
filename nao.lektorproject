@@ -1,9 +1,0 @@
-[project]
-name = Naomi's Stuff
-locale = en_AU
-url = https://nao.id.au/
-
-[packages]
-lektor-markdown-header-anchors = 0.3.1
-lektor-markdown-highlighter = 0.3.2
-lektor-htmlmin = 1.0.3
