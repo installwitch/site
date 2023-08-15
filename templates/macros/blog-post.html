@@ -1,7 +1,0 @@
-{% macro render_blog_post(post, from_index=false) %}
-<article>
-  <h1 class="lh-title">{{ post.title }}</h1>
-  <p>Written by <a href="{{ post.author_url }}">{{ post.author }}</a> on {{ post.pub_date }}.</p>
-  {{ post.body }}
-</article>
-{% endmacro %}

@@ -1,11 +1,7 @@
 [build]
-publish = "build-output/"
-command = "lektor build --output-path ./build-output"
-
+publish = "public"
+command = "zola build"
 [build.environment]
-  PYTHON_VERSION = "3.8"
-
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+ZOLA_VERSION = "0.17.2"
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
