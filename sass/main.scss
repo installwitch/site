@@ -1,17 +1,60 @@
-$fonts: sans-serif;
-
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Colour Classes */
+$white: #D5D0B8;
+$black: #141414;
+$blue: #2A2F47;
+$green: #A4B86F;
+/* Fonts */
+$fonts: 'Atkinson Hyperlegible', sans-serif;
+/* Layout */
 body {
     font: 100% $fonts;
 }
 
 .container {
     max-width: 40rem;
+    margin: auto;
 }
 
-nav
+nav 
     ul {
         list-style: none;
+        padding-left: 0;
     }
     li {
         display: inline;
     }
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	body, html {color: $white; background-color: $black;}
+	a {color: $green;}
+	a:visited {color: $green;}
+	.active {color: $green;}
+	.card {background-color: $white; color: $black;}
+	.card i{color: $black;}
+	.card h1 a{color: $black;}
+	.content {color: $white;}
+	.content a{color: $green;}
+	.header {color: $green;}
+	.hero {border: 1px solid $white;}
+	.tagline {color: $green;}
+	.thumbnail{border: 1px $white solid;}
+	.title {color: $white;}
+}
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	body, html {color: $black; background-color: $white}
+	a {color: $blue;}
+	a:visited {color: $blue;}
+	.active {color: $blue;}
+	.card {background-color: $black; color: $white;}
+	.card i{color: $white;}
+	.card h1 a{color: $white;}
+	.content {color: $black}
+	.content a{color: $blue;}
+	.header {color: $blue;}
+	.hero {border: 1px solid $black;}
+	.tagline {color: $blue;}
+	.thumbnail{border: 1px $black solid;}
+	.title {color: $black;}
+}

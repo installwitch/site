@@ -9,16 +9,20 @@
 </head>
 <body>
   <div class="container">
-  <nav>
-    <ul>
-      <li><a class="link" href="/">Home</a></li>
-      <li><a class="link" href="/blog">Blog</a></li>
-      <li><a class="link" href="/about">About</a></li>
-    </ul>
+  <nav class="ma3 pb3 bb">
+    <a class="link dim b dib mr3" href="/" title="Home">Naomi's Stuff</a>
+    <span class="mr3">/</span>
+    <a class="link dim dib mr3" href="/" title="Home">Home</a>
+    <a class="link dim dib mr3" href="/about" title="About">About</a>
+    <a class="link dim dib mr3" href="/blog" title="Blog">Blog</a>
+    <a class="link dim dib" href="/gallery" title="Gallery">Gallery</a>
   </nav>
-  <main>
+  <main class="ph3">
     {% block content %}{% endblock %}
   </main>
+  <footer class="ma3 bt">
+    <p><a class="link" href="/copyright">© Naomi Deakin-Thomas</a> / <a class="link" href="/copyright/attribution">Attribution</a></p>
+  </footer>
   </div>
 </body>
 </html>
