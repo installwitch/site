@@ -4,14 +4,17 @@
   <title>Naomi's Stuff</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="main.css" rel="stylesheet" />
-  <link href="css/tachyons.css" rel="stylesheet" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='/images/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='/images/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='/images/favicon-16x16.png') }}">
+  <link href="{{ get_url(path='main.css') }}" rel="stylesheet" />
+  <link href="{{ get_url(path='css/tachyons.css') }}" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-  <nav class="ma3 pb3 bb">
+  <nav class="ma3 pb3">
     <a class="link dim b dib mr3" href="/" title="Home">Naomi's Stuff</a>
-    <span class="mr3">/</span>
+    <span class="dib mr3">/</span>
     <a class="link dim dib mr3" href="/" title="Home">Home</a>
     <a class="link dim dib mr3" href="/about" title="About">About</a>
     <a class="link dim dib mr3" href="/blog" title="Blog">Blog</a>
@@ -20,8 +23,8 @@
   <main class="ph3">
     {% block content %}{% endblock %}
   </main>
-  <footer class="ma3 bt">
-    <p><a class="link" href="/copyright">© Naomi Deakin-Thomas</a> / <a class="link" href="/copyright/attribution">Attribution</a></p>
+  <footer class="ma3">
+    <p><a class="link" href="/copyright">© Naomi Deakin-Thomas</a> / <a class="link" href="/attribution">Attribution</a></p>
   </footer>
   </div>
 </body>

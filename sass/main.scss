@@ -1,34 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 /* Colour Classes */
 $white: #D5D0B8;
+$whitedim: #6b685c;
+$whitebright: #eae8dc;
 $black: #141414;
+$blackdim: #0a0a0a;
+$blackbright: #8a8a8a;
 $blue: #2A2F47;
+$bluedim: #151824;
+$bluebright: #9597a3;
 $green: #A4B86F;
+$greendim: #58633c;
+$greenbright: #d2dcb7;
 /* Fonts */
 $fonts: 'Atkinson Hyperlegible', sans-serif;
 /* Layout */
 body {
     font: 100% $fonts;
 }
-
 .container {
     max-width: 40rem;
     margin: auto;
 }
-
-nav 
-    ul {
+nav ul {
         list-style: none;
         padding-left: 0;
     }
-    li {
+nav li {
         display: inline;
     }
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
 	body, html {color: $white; background-color: $black;}
 	a {color: $green;}
-	a:visited {color: $green;}
+	a:active {color: $greenbright;}
+	a:visited {color: $greendim;}
+	nav a, footer a {color: $green;}
+	nav a:active, footer a:active {color: $green;}
+	nav a:visited, footer a:visited {color: $green;}
+	footer {border-top: 1px solid $blackbright;}
+	nav {border-bottom: 1px solid $blackbright;}
 	.active {color: $green;}
 	.card {background-color: $white; color: $black;}
 	.card i{color: $black;}
@@ -45,7 +56,13 @@ nav
 @media (prefers-color-scheme: light) {
 	body, html {color: $black; background-color: $white}
 	a {color: $blue;}
-	a:visited {color: $blue;}
+	a:active {color: $bluebright;}
+	a:visited {color: $bluedim;}
+	nav a, footer a {color: $blue;}
+	nav a:active, footer a:active {color: $blue;}
+	nav a:visited, footer a:visited {color: $blue;}
+	footer {border-top: 1px solid $whitedim;}
+	nav {border-bottom: 1px solid $whitedim;}
 	.active {color: $blue;}
 	.card {background-color: $black; color: $white;}
 	.card i{color: $white;}
