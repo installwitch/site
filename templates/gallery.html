@@ -4,10 +4,14 @@
 <h1 class="title">{{ section.title }}</h1>
 <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
 {% for page in section.pages %}
-<article>
-  <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
-  <span class="f6 lh-copy">Written {{ page.date }}</span>
-  <p>{{ page.description }}</p>
+<article class="fl w-100 w-50-m  w-25-ns pa2-ns">
+  <div class="aspect-ratio aspect-ratio--1x1">
+    <img style="background-image:url({{ get_url(path='images/cover.jpg') }});" class="db bg-center cover aspect-ratio--object" />
+  </div>
+  <a href="#0" class="ph2 ph0-ns pb3 link db">
+    <h3 class="f5 f4-ns mb0">{{ page.title }}</h3>
+    <h3 class="f6 f5 fw4 mt2">{{ page.summary }}</h3>
+  </a>
 </article>
 {% endfor %}
 {% endblock content %}

@@ -4,11 +4,13 @@ title = "Naomi's Stuff"
 description = ""
 # Site Generation Options
 compile_sass = true
-build_search_index = true
 include_title = true
 include_content = true
 truncate_content_length = 100
 generate_feed = true
+# Search Options
+build_search_index = true
+index_format = "elasticlunr_json"
 # Markdown Rendering Options
 [markdown]
 highlight_code = true

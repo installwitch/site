@@ -5,9 +5,9 @@
 <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
 {% for page in section.pages %}
 <article>
-  <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title }}</a></h2>
-  <span class="f6 lh-copy">Written {{ page.date }}</span>
-  <p>{{ page.description }}</p>
+  <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></h2>
+  <i title="Author" class="ti ti-user-edit"> </i><span class="f6 lh-copy">{{ page.date | safe }}</span> <i title="Reading Time" class="ti ti-book-2"> </i><span class="f6 lh-copy">{{ page.reading_time | safe }} minutes</span>
+  <p>{{ page.summary | safe }}</p>
 </article>
 {% endfor %}
 {% endblock content %}

@@ -1,20 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">Home</h1>
-<article class="center">
-  <div class="aspect-ratio aspect-ratio--16x9 mb4 hero">
-    <div class="aspect-ratio--object cover" style="background:url(images/cover.jpg) center;"></div>
-  </div>
+<h1 class="title">{{ section.title }}</h1>
+{% for page in paginator.pages %}
+<article>
+  <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></h2>
+  <i title="Author" class="ti ti-user-edit"> </i><span class="f6 lh-copy">{{ page.date | safe }}</span> <i title="Reading Time" class="ti ti-book-2"> </i><span class="f6 lh-copy">{{ page.reading_time | safe }} minutes</span>
+  <p>{{ page.summary | safe }}</p>
 </article>
-<div class="center tj measure-wide">
-<p><strong>Welcome!</strong> You've reached the personal website of Naomi.</p>
-<p>My socials:</p>
-<ul>
-  <li><a href="https://cohost.org/nao">Cohost</a></li>
-  <li><a rel="me" href="https://aus.social/@nao">Mastodon</a></li>
-  <li><a href="https://pixelfed.au/@nao">Pixelfed</a></li>
-  <li><a href="https://t.me/naomi_deakin">Telegram</a></li>
-</ul>
+{% endfor %}
+<hr>
+<div class="pagination flex align-end justify-between mv3">
+  {% if paginator.previous %}
+    <a class="previous link dim" href="{{ paginator.previous }}"><i class="ti ti-caret-left-filled"> </i>Previous</a>
+  {% else %}
+    <span class="previous"><i class="ti ti-caret-left"> </i>Previous</span>
+  {% endif %}
+  {% if paginator.next %}
+    <a class="next link dim" href="{{ paginator.next }}">Next <i class="ti ti-caret-right-filled"></i></a>
+    {% else %}
+    <span class="next">Next <i class="ti ti-caret-right"></i></span>
+  {% endif %}
 </div>
 {% endblock content %}
