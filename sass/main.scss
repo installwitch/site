@@ -26,8 +26,10 @@ nav ul {list-style: none; padding-left: 0;}
 nav li {display: inline;}
 table {width: 100%; margin: auto;}
 pre {padding: 1rem; border-radius: .125rem; font-family: $fontmono ;}
+img {border: none;}
 .hero {border-radius: .125rem;}
 .footnote-definition * {display: inline;}
+.gallery-content * {border: none; border-style: none;}
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
 	body, html {color: $white; background-color: $black;}

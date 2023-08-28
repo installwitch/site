@@ -5,7 +5,8 @@
 {% for page in paginator.pages %}
 <article>
   <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></h2>
-  <i title="Author" class="ti ti-user-edit"> </i><span class="f6 lh-copy">{{ page.date | safe }}</span> <i title="Reading Time" class="ti ti-book-2"> </i><span class="f6 lh-copy">{{ page.reading_time | safe }} minutes</span>
+  <span class="f6 lh-copy"><i title="Date" class="ti ti-calendar"> </i>{{ page.date | safe }}</span>
+  <span class="f6 lh-copy"><i title="Reading Time" class="ti ti-book-2"> </i>{{ page.reading_time | safe }} minutes</span>
   <p>{{ page.summary | safe }}</p>
 </article>
 {% endfor %}
