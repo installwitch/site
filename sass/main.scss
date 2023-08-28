@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
 /* Colour Classes */
 $white: #D5D0B8;
 $whitedim: #6b685c;
@@ -29,7 +27,7 @@ pre {padding: 1rem; border-radius: .125rem; font-family: $fontmono ;}
 img {border: none;}
 .hero {border-radius: .125rem;}
 .footnote-definition * {display: inline;}
-.gallery-content {object-fit: cover; object-position: center; border: 1px solid $white; border-radius: .125rem;}
+.gallery-content {object-fit: cover; object-position: center; border-radius: .125rem;}
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
 	body, html {color: $white; background-color: $black;}
@@ -49,6 +47,7 @@ img {border: none;}
 	.card h1 a{color: $black;}
 	.content {color: $white;}
 	.content a{color: $green;}
+	.gallery-content {border: 1px solid $white;}
 	.header {color: $green;}
 	.hero {border: 1px solid $white;}
 	.next {color: $blackbright;}
@@ -76,6 +75,7 @@ img {border: none;}
 	.card h1 a{color: $white;}
 	.content {color: $black}
 	.content a{color: $blue;}
+	.gallery-content {border: 1px solid $black;}
 	.header {color: $blue;}
 	.hero {border: 1px solid $black;}
 	.next {color: $whitedim;}

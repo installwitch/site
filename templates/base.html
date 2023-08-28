@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% if page.title %}{{ page.title }} -{% endif %}{% if section.title %}{{ section.title }} -{% endif %} Naomi's Stuff</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{% if section.title %}{{ section.title }} - {% endif %}Naomi's Stuff</title>
   <meta charset="utf-8" />
+  <meta name="description" content="{% if page.summary %}{{ page.summary | safe }}{% else %}Naomi's personal website, blog, and image gallery.{% endif %}" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='/images/favicon/apple-touch-icon.png') }}" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='/images/favicon/favicon-32x32.png') }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='/images/favicon/favicon-16x16.png') }}" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="{{ get_url(path='main.css') }}" />
-  <link rel="stylesheet" href="{{ get_url(path='css/tachyons.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='main.css') }}" />
+  <link rel="stylesheet" type="text/css" href="https://naoidau-cdn.syd1.cdn.digitaloceanspaces.com/css/atkinson-hyperlegible.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://naoidau-cdn.syd1.cdn.digitaloceanspaces.com/css/tabler-icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://naoidau-cdn.syd1.cdn.digitaloceanspaces.com/css/tachyons.min.css" />
 </head>
 <body>
   <div class="container">
@@ -26,7 +28,7 @@
   </main>
   <footer class="flex justify-between ma3 pt3">
     <span><a class="link" href="/pages/copyright">© Naomi Deakin-Thomas</a> / <a class="link" href="/pages/attribution">Attribution</a></span>
-    <span><a rel="me" class="mr3 link dim" href="https://cohost.org/nao"><i class="ti ti-brand-cohost"></i></a><a rel="me" class="mr3 link dim" href="https://aus.social/@nao"><i class="ti ti-brand-mastodon"></i></a><a rel="me" class="link dim" href="https://pixelfed.au/@nao"><i class="ti ti-brand-instagram"></i></a></span>
+    <span><a rel="me" name="Cohost" class="mr3 link dim" href="https://cohost.org/nao"><i class="ti ti-brand-cohost"></i></a><a rel="me" name="Mastodon" class="mr3 link dim" href="https://aus.social/@nao"><i class="ti ti-brand-mastodon"></i></a><a rel="me" name="Pixelfed" class="link dim" href="https://pixelfed.au/@nao"><i class="ti ti-brand-instagram"></i></a></span>
   </footer>
   </div>
 </body>
