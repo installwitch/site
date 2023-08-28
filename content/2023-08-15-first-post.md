@@ -49,14 +49,14 @@ Here's a huge table that I haven't written any CSS for yet:
 
 ---
 
-```json
-"cssPath": [
+```toml
+"cssPath" = [
   "theme1/*.css",
   "theme2/*.scss"
 ]
 ```
 
-Here's some JSON.  
+Here's some ~~JSON~~ TOML[^2].  
 
 ---
 
@@ -69,3 +69,4 @@ Here's some JSON.
 ---
 
 [^1]: [I'm sorry, Cicero.](https://en.wikipedia.org/wiki/Lorem_ipsum)
+[^2]: Formerly Jason, now Tom L
