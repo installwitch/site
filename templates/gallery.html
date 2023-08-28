@@ -3,8 +3,11 @@
 <h1 class="title">{{ section.title }}</h1>  
 <div class="flex flex-wrap items-start">
 {% for page in paginator.pages %}
-  <article class="gallery-content w-100 w-50-m w-25-ns">
-    <a class="dim gallery-content" href="{{ page.permalink | safe }}"><div class="aspect-ratio aspect-ratio--1x1 gallery-content"><img style="background-image:url({{ page.extra.cover_url | safe }});" class="db bg-center cover aspect-ratio--object gallery-content" /></div></a>
+  <article class="w-100 w-50-ns pa1">
+    <a class="dim" href="{{ page.permalink | safe }}"><div class="aspect-ratio aspect-ratio--4x3"><img src="{{ page.extra.cover_url | safe }}" class="db aspect-ratio--object gallery-content" /></div></a>
+  <a class="link dim" href="{{ page.permalink | safe }}"><h3 class="mb0">{{ page.title }}</h3></a>
+  <span class="mt0"><i class="ti ti-calendar"> </i>{{ page.date }}</span> 
+  <span class="mt0"><i class="ti ti-camera"> </i>{% if page.extra.camera %}{{ page.extra.camera }}{% else %}No camera information{% endif %}</span>
   </article>
 {% endfor %}
 </div>

@@ -29,7 +29,7 @@ pre {padding: 1rem; border-radius: .125rem; font-family: $fontmono ;}
 img {border: none;}
 .hero {border-radius: .125rem;}
 .footnote-definition * {display: inline;}
-.gallery-content * {border: none; border-style: none;}
+.gallery-content {object-fit: cover; object-position: center; border: 1px solid $white; border-radius: .125rem;}
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
 	body, html {color: $white; background-color: $black;}
