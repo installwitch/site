@@ -13,7 +13,7 @@ $greendim: color-mix(in srgb, $green 70%, $black);
 $greenbright: color-mix(in srgb, $green 70%, $white);
 /* Fonts */
 $font: 'Atkinson Hyperlegible', sans-serif;
-$fontmono: 'Inconsolata', monospace;
+$fontmono: monospace;
 /* Layout */
 body {font: 100% $font;}
 .container {

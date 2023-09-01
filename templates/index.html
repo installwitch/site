@@ -10,17 +10,15 @@
   <p>{{ page.summary | safe }}</p>
 </article>
 {% endfor %}
-<hr>
 <div class="pagination flex align-end justify-between mv3">
+  {% if paginator.previous or paginator.next %}
+    <hr>
+  {% endif %}
   {% if paginator.previous %}
     <a class="previous link dim" href="{{ paginator.previous }}"><i class="ti ti-caret-left-filled"> </i>Previous</a>
-  {% else %}
-    <span class="previous"><i class="ti ti-caret-left"> </i>Previous</span>
   {% endif %}
   {% if paginator.next %}
     <a class="next link dim" href="{{ paginator.next }}">Next <i class="ti ti-caret-right-filled"></i></a>
-    {% else %}
-    <span class="next">Next <i class="ti ti-caret-right"></i></span>
   {% endif %}
 </div>
 {% endblock content %}
