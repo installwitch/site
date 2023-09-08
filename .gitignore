@@ -2,7 +2,8 @@
 /public/
 # Ghostwriter Backup Files
 *.md.backup
-# Pictures with uncleared EXIF
+# Extra photo gubbins
+/darktable_exported/
 *.JPG_original
 *.jpg_original
 *.JPEG_original
@@ -11,3 +12,5 @@
 *.cr2_original
 *.PNG_original
 *.png_original
+*.xcf
+*.xmp
