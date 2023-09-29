@@ -1,2 +1,18 @@
-# Lektor Build Files
-/build
+# Zola Build Directory
+/public/
+# Ghostwriter Backup Files
+*.md.backup
+# Extra photo gubbins
+/darktable_exported/
+*.JPG_original
+*.jpg_original
+*.JPEG_original
+*.jpeg_original
+*.CR2_original
+*.cr2_original
+*.PNG_original
+*.png_original
+*.xcf
+*.xmp
+# Ignore Drafts
+*.md.draft

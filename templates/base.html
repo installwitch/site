@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{% if section.title %}{{ section.title }} - {% endif %}Naomi's Stuff</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="{% if page.summary %}{{ page.summary | safe }}{% else %}Naomi's personal website, blog, and image gallery.{% endif %}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='/images/favicon/apple-touch-icon.png') }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='/images/favicon/favicon-32x32.png') }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='/images/favicon/favicon-16x16.png') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='style.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='/css/tachyons.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='/css/atkinson-hyperlegible.min.css') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ get_url(path='/css/tabler-icons.min.css') }}" />
+</head>
+<body>
+  <div class="container">
+  <nav class="ma3 pb3">
+    <a class="link dim b dib mr1 mr3-ns" href="/" title="Home">Naomi's Stuff</a>
+    <span class="dib mr1 mr3-ns">/</span>
+    <a class="link dim dib mr1 mr3-ns" href="/" title="Home">Blog</a>
+    <a class="link dim dib mr1 mr3-ns" href="/gallery" title="Gallery">Gallery</a>
+    <a class="link dim dib mr1 mr3-ns" href="/pages/about" title="About">About</a>
+    <!-- <a class="link dim dib fr" href="/search"><i title="Search" class="ti ti-fw ti-search"></i></a> -->
+  </nav>
+  <main class="ma3 content">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="flex justify-between ma3 pt3">
+    <span><a class="link" href="/pages/copyright">© Naomi Deakin-Thomas</a> / <a class="link" href="/pages/attribution">Attribution</a></span>
+    <span><a rel="me" name="Cohost" class="mr3 link dim" href="https://cohost.org/nao"><i class="ti ti-brand-cohost"></i></a><a rel="me" name="Mastodon" class="mr3 link dim" href="https://aus.social/@nao"><i class="ti ti-brand-mastodon"></i></a><a rel="me" name="Pixelfed" class="link dim" href="https://pixelfed.au/@nao"><i class="ti ti-brand-instagram"></i></a></span>
+  </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">{{ section.title }}</h1>
+<!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
+{% for page in section.pages %}
+<article>
+  <h2 class="lh-title"><a href="{{ page.permalink | safe }}">{{ page.title | safe }}</a></h2>
+  <i title="Date" class="ti ti-calendar"> </i><span class="f6 lh-copy">{{ page.date | safe }}</span> <i title="Reading Time" class="ti ti-book-2"> </i><span class="f6 lh-copy">{{ page.reading_time | safe }} minutes</span>
+  <p>{{ page.summary | safe }}</p>
+</article>
+{% endfor %}
+{% endblock content %}

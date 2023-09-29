@@ -1,0 +1,86 @@
+/* Colour Classes */
+$white: #D5D0B8;
+$whitedim: #6b685c;
+$whitebright: #eae8dc;
+$black: #141414;
+$blackdim: #0a0a0a;
+$blackbright: color-mix(in srgb, $black 70%, $white);
+$blue: #2A2F47;
+$bluedim: color-mix(in srgb, $blue 70%, $black);
+$bluebright: color-mix(in srgb, $blue 70%, $white);
+$green: #A4B86F;
+$greendim: color-mix(in srgb, $green 70%, $black);
+$greenbright: color-mix(in srgb, $green 70%, $white);
+/* Fonts */
+$font: 'Atkinson Hyperlegible', sans-serif;
+$fontmono: monospace;
+/* Layout */
+body {font: 100% $font;}
+.container {
+    max-width: 40rem;
+    margin: auto;
+}
+nav ul {list-style: none; padding-left: 0;}
+nav li {display: inline;}
+table {width: 100%; margin: auto;}
+pre {padding: 1rem; border-radius: .125rem; font-family: $fontmono ;}
+img {border: none;}
+.hero {border-radius: .125rem;}
+.footnote-definition * {display: inline;}
+.gallery-content {object-fit: cover; object-position: center; border-radius: .125rem;}
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+	body, html {color: $white; background-color: $black;}
+	a {color: $green;}
+	a:active {color: $greenbright;}
+	a:visited {color: $greendim;}
+	blockquote {border-left: 2px solid $blackbright; margin-left: 1em; padding-left: 1em;}
+	nav a, footer a {color: $green;}
+	nav a:active, footer a:active {color: $green;}
+	nav a:visited, footer a:visited {color: $green;}
+	nav {border-bottom: 1px solid $blackbright;}
+	footer {border-top: 1px solid $blackbright;}
+	hr {border: none; border-top: 1px solid $blackbright;}
+	.active {color: $green;}
+	.card {background-color: $white; color: $black;}
+	.card i{color: $black;}
+	.card h1 a{color: $black;}
+	.content {color: $white;}
+	.content a{color: $green;}
+	.gallery-content {border: 1px solid $white;}
+	.header {color: $green;}
+	.hero {border: 1px solid $white;}
+	.next {color: $blackbright;}
+	.previous {color: $blackbright}
+	.tagline {color: $green;}
+	.thumbnail{border: 1px $white solid;}
+	.title {color: $white;}
+}
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+	body, html {color: $black; background-color: $white}
+	a {color: $blue;}
+	a:active {color: $bluebright;}
+	a:visited {color: $bluedim;}
+	blockquote {border-left: 2px solid $whitedim; margin-left: 1em; padding-left: 1em;}
+	nav a, footer a {color: $blue;}
+	nav a:active, footer a:active {color: $blue;}
+	nav a:visited, footer a:visited {color: $blue;}
+	nav {border-bottom: 1px solid $whitedim;}
+	footer {border-top: 1px solid $whitedim;}
+	hr {border: none; border-top: 1px solid $whitedim;}
+	.active {color: $blue;}
+	.card {background-color: $black; color: $white;}
+	.card i{color: $white;}
+	.card h1 a{color: $white;}
+	.content {color: $black}
+	.content a{color: $blue;}
+	.gallery-content {border: 1px solid $black;}
+	.header {color: $blue;}
+	.hero {border: 1px solid $black;}
+	.next {color: $whitedim;}
+	.previous {color: $whitedim}
+	.tagline {color: $blue;}
+	.thumbnail{border: 1px $black solid;}
+	.title {color: $black;}
+}

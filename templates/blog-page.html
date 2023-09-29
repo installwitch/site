@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">{{ page.title }}</h1>
+<span><i class="ti ti-calendar"> </i>{{ page.date }}</span>
+<span><i class="ti ti-book-2"> </i>{% if page.reading_time == 1 %}{{ page.reading_time }} minute{% else %}{{ page.reading_time }} minutes{% endif %}</span>
+{{ page.content | safe }}
+{% endblock content %}

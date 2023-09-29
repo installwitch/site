@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title">{{ section.title }}</h1>  
+<div class="flex flex-wrap items-start">
+{% for page in paginator.pages %}
+  <article class="w-100 w-50-ns pa1">
+    <a name="{{ page.title | safe }}" class="dim" href="{{ page.permalink | safe }}">
+      <div class="aspect-ratio aspect-ratio--4x3">
+        <img alt="{{ page.title | safe }}" src="{{ page.extra.cover_url | safe }}" class="db aspect-ratio--object gallery-content" />
+      </div>
+    </a>
+  <a class="link dim" href="{{ page.permalink | safe }}"><h3 class="mb0">{{ page.title }}</h3></a>
+  <span class="mt0"><i class="ti ti-calendar"> </i>{{ page.date }}</span> 
+  <span class="mt0"><i class="ti ti-camera"> </i>{% if page.extra.camera %}{{ page.extra.camera }}{% else %}No camera information{% endif %}</span>
+  </article>
+{% endfor %}
+</div>
+<div class="pagination flex align-end justify-between mv3">
+  {% if paginator.previous or paginator.next %}
+    <hr>
+  {% endif %}
+  {% if paginator.previous %}
+    <a class="previous link dim" href="{{ paginator.previous }}"><i class="ti ti-caret-left-filled"> </i>Previous</a>
+  {% endif %}
+  {% if paginator.next %}
+    <a class="next link dim" href="{{ paginator.next }}">Next <i class="ti ti-caret-right-filled"></i></a>
+  {% endif %}
+</div>
+{% endblock content %}
