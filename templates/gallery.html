@@ -4,9 +4,9 @@
 <div class="flex flex-wrap items-start">
 {% for page in paginator.pages %}
   <article class="w-100 w-50-ns pa1">
-    <a class="dim" href="{{ page.permalink | safe }}">
+    <a name="{{ page.title | safe }}" class="dim" href="{{ page.permalink | safe }}">
       <div class="aspect-ratio aspect-ratio--4x3">
-        <img src="{{ page.extra.cover_url | safe }}" class="db aspect-ratio--object gallery-content" />
+        <img alt="{{ page.title | safe }}" src="{{ page.extra.cover_url | safe }}" class="db aspect-ratio--object gallery-content" />
       </div>
     </a>
   <a class="link dim" href="{{ page.permalink | safe }}"><h3 class="mb0">{{ page.title }}</h3></a>
