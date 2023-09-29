@@ -14,3 +14,5 @@
 *.png_original
 *.xcf
 *.xmp
+# Ignore Drafts
+*.md.draft
